@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../layui/css/layui.css" media="all">
+    <script src="../layui/layui.all.js"></script>
+</head>
+<body>
+<textarea id="demo" style="display: none;"></textarea>
+<script>
+    layui.use('layedit', function () {
+        var layedit = layui.layedit;
+        layedit.set({
+            uploadImage: {
+                url: '/uploadImage' //接口url
+                , type: 'post' //默认post
+            }
+        });
+        layedit.build('demo');
+    });
+</script>
+</body>
+</html>
